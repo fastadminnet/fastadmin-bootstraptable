@@ -9,7 +9,8 @@
     'use strict';
 
     var sprintf = $.fn.bootstrapTable.utils.sprintf,
-        objectKeys = $.fn.bootstrapTable.utils.objectKeys;
+        objectKeys = $.fn.bootstrapTable.utils.objectKeys,
+        escapeHTML = $.fn.bootstrapTable.utils.escapeHTML;
 
     var getOptionsFromSelectControl = function (selectControl) {
         return selectControl.get(selectControl.length - 1).options;
@@ -30,12 +31,12 @@
     };
 
     var addOptionToSelectControl = function (selectControl, value, text) {
-        value = $.trim(value);
+        value = escapeHTML($.trim(value));
+        text = escapeHTML(text);
         selectControl = $(selectControl.get(selectControl.length - 1));
         if (!existOptionInSelectControl(selectControl, value)) {
-            selectControl.append($("<option></option>")
-                .attr("value", value)
-                .text($('<div />').html(text).text()));
+            const option = $(`<option value="${value}">${text}</option>`);
+            selectControl.append(option);
         }
     };
 

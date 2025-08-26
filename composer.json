@@ -1,9 +1,9 @@
 {
-    "name": "karsonzhang/fastadmin-bootstraptable",
+    "name": "fastadminnet/fastadmin-bootstraptable",
     "description": "An extended Bootstrap table with radio, checkbox, sort, pagination and other features.",
     "keywords": ["bootstrap","table","tablesort","pagination"],
     "type": "component",
-    "homepage": "https://github.com/karsonzhang/fastadmin-bootstraptable",
+    "homepage": "https://github.com/fastadminnet/fastadmin-bootstraptable",
     "license": "MIT",
     "require": {
         "twitter/bootstrap": ">=3.3.0"

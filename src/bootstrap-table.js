@@ -3088,7 +3088,8 @@
         calculateObjectValue: calculateObjectValue,
         getItemField: getItemField,
         objectKeys: objectKeys,
-        isIEBrowser: isIEBrowser
+        isIEBrowser: isIEBrowser,
+        escapeHTML: escapeHTML
     };
 
     // BOOTSTRAP TABLE INIT
