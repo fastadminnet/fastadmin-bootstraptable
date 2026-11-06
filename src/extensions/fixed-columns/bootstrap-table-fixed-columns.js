@@ -288,8 +288,10 @@
                 var scrollHeight = tableBody.scrollWidth > tableBody.clientWidth ? getScrollBarWidth() : 0;
                 var paginationHeight = $(".fixed-table-pagination", that.$tableContainer).height();
                 if (typeof that.options.height !== 'undefined') paginationHeight = 0;
+                var footerHeight = that.options.showFooter ? $(".fixed-table-footer", that.$tableContainer).outerHeight() : 0;
+                if (typeof that.options.height !== 'undefined') footerHeight = 0;
                 $fixedColumns.css({
-                    "height": "calc(100% - " + (paginationHeight + scrollHeight) + "px)"
+                    "height": "calc(100% - " + (paginationHeight + scrollHeight + footerHeight) + "px)"
                 });
                 $fixedBody.css({
                     "height": "calc(100% - " + $fixedHeader.height() + "px)",
